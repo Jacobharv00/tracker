@@ -1,7 +1,9 @@
 const express = require( 'express' )
 const mongoose = require( 'mongoose' )
+const authRoutes = require( './routes/authRoutes' )
 
 const app = express()
+app.use( authRoutes )
 
 const mongoUri = 'mongodb+srv://Jharv1:Purple2018!@cluster0.rrppzbf.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect( mongoUri )
